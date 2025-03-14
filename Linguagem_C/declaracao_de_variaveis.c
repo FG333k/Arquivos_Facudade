@@ -10,8 +10,8 @@ void main(){
     printf("Ol�\n");
 
     //Utilizando n�meros inteiros
-    int a = 50 //declara��o de variavel inteira
-    printf("O valor de a � = %d \n", a);  //para printar se utiliza %d
+    int a = 50; //declara��o de variavel inteira
+    printf("O valor de a e = %d \n", a);  //para printar se utiliza %d
     scanf("%d", &a);  //Para ler tamb�m se utiliza %d
     printf("O valor de a mudou para = %d", a);
 
