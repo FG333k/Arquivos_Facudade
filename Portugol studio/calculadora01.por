@@ -2,10 +2,10 @@ programa
 {
     funcao inicio()
     {
-        cadeia Ex, resp, Rd, N
+        caracter Ex, resp, Rd, N
         real N1, N2, V, Re
         
-        repita
+        faca
         {
             escreva("========================\n")
             escreva("|      CALCULADORA     |\n")
@@ -21,13 +21,13 @@ programa
             escreva("==> ")
             leia(Ex)
             
-            limpa_tela()
+            limpa()
             
-            repita
+            faca
             {
-                escolha Ex
+                escolha (Ex)
                 {
-                    caso "+":
+                    caso '+':
                         escreva("=======================\n")
                         escreva("|        SOMA         |\n")
                         escreva("=======================\n")
@@ -39,7 +39,7 @@ programa
                         V = N1 + N2
                         escreva("==[ ", N1, " + ", N2, " = ", V, " ]\n")
                         
-                    caso "-":
+                    caso '-':
                         escreva("=======================\n")
                         escreva("|     SUBTRAÇÃO       |\n")
                         escreva("=======================\n")
@@ -51,7 +51,7 @@ programa
                         V = N1 - N2
                         escreva("==[ ", N1, " - ", N2, " = ", V, " ]\n")
                         
-                    caso "X", "x":
+                    caso 'x':
                         escreva("=============================\n")
                         escreva("|    MULTIPLICAÇÃO         |\n")
                         escreva("=============================\n")
@@ -63,7 +63,7 @@ programa
                         V = N1 * N2
                         escreva("==[ ", N1, " x ", N2, " = ", V, " ]\n")
                         
-                    caso "/":
+                    caso '/':
                         escreva("=================\n")
                         escreva("|    DIVISÃO    |\n")
                         escreva("=================\n")
@@ -71,28 +71,11 @@ programa
                         leia(N1)
                         escreva("2° Numero: ")
                         leia(N2)
-                        escreva("[C] Divisão Completa\n")
-                        escreva("[R] Divisão C/ Resto\n")
-                        escreva("==> ")
-                        leia(Rd)
+                       
+                        V = N1 / N2
+                        escreva("==[ ", N1, " / ", N2, " = ", V, " ]\n")
                         
-                        escolha Rd
-                        {
-                            caso "c", "C":
-                                V = N1 / N2
-                                escreva("==[ ", N1, " / ", N2, " = ", V, " ]\n")
-                            
-                            caso "r", "R":
-                                V = trunc(N1 / N2)
-                                Re = N1 mod N2
-                                escreva("==[ ", N1, " / ", N2, " = ", V, " ]\n")
-                                escreva("==[ Resto: ", Re, " ]\n")
-                            
-                            caso contrario:
-                                escreva("Opção inválida! Escolha 'C' ou 'R'.\n")
-                        }
-                        
-                    caso "^":
+                    caso '^':
                         escreva("=============================\n")
                         escreva("|       POTENCIAÇÃO         |\n")
                         escreva("=============================\n")
@@ -101,7 +84,7 @@ programa
                         escreva("2° Numero: ")
                         leia(N2)
                         
-                        V = potencia(N1, N2)
+                        V = (N1 ^ N2)
                         escreva("==[ ", N1, " ^ ", N2, " = ", V, " ]\n")
                     
                     caso contrario:
@@ -110,9 +93,9 @@ programa
                 
                 escreva("NOVAMENTE? [SIM=> ENTER / N]: ")
                 leia(N)
-                limpa_tela()
+                limpa()
                 
-            } enquanto (N != "n" e N != "N")
+            } enquanto (N != 'n' e N != 'N')
             
             escreva("==============================\n")
             escreva("|     DESEJA CONTINUAR?      |\n")
@@ -122,9 +105,9 @@ programa
             escreva("==> ")
             leia(resp)
             
-            limpa_tela()
+            limpa()
             
-        } enquanto (resp != "n" e resp != "N")
+        } enquanto (resp != 'n' e resp != 'N')
     }
 }
 
@@ -133,7 +116,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 127; 
+ * @POSICAO-CURSOR = 69; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
