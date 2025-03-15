@@ -1,5 +1,5 @@
 programa
-{
+{	
     funcao inicio()
     {
         caracter Ex, resp, Rd, N
@@ -84,7 +84,7 @@ programa
                         escreva("2° Numero: ")
                         leia(N2)
                         
-                        V = (N1 ^ N2)
+                        V = exp(N1 * log(N2))
                         escreva("==[ ", N1, " ^ ", N2, " = ", V, " ]\n")
                     
                     caso contrario:
@@ -116,7 +116,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 69; 
+ * @POSICAO-CURSOR = 11; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
