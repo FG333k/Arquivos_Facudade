@@ -2,7 +2,8 @@ programa
 {
     funcao inicio()
     {
-        caracter Ex, resp, Rd, N
+        caracter Ex, resp, Rd
+        cadeia N
         real N1, N2, V, Re
         
         faca
@@ -28,53 +29,102 @@ programa
                 escolha (Ex)
                 {
                     caso '+':
-                        escreva("===========\n")
-                        escreva("| SOMA |\n")
-                        escreva("===========\n")
-                        escreva("1° Numero: ")
-                        leia(N1)
-                        escreva("2° Numero: ")
-                        leia(N2)
+                        faca
+                        {     
+						escreva("===========\n")
+                        		escreva("| SOMA |\n")
+                        		escreva("===========\n")
+                        		escreva("1° Numero: ")
+                        		leia(N1)
+                        		escreva("2° Numero: ")
+                        		leia(N2)
                         
-                        V = N1 + N2
-                        escreva("==[ ", N1, " + ", N2, " = ", V, "\n")
+                        		V = N1 + N2
+                        		escreva("==[ ", N1, " + ", N2, " = ", V, "\n")
+                        		                   
+				    		escreva("\n")
+				    		escreva("\n")
+				    
+                        		escreva("NOVAMENTE? [SIM=> S / N]: ")
+                        		leia(N)
+
+                        		limpa()
+
+                        } enquanto (N != "n" e N != "N")
                         
                     caso '-':
-                        escreva("=======================\n")
-                        escreva("| SUBTRAÇÃO |\n")
-                        escreva("=======================\n")
-                        escreva("1° Numero: ")
-                        leia(N1)
-                        escreva("2° Numero: ")
-                        leia(N2)
-                        
-                        V = N1 - N2
-                        escreva("==[ ", N1, " - ", N2, " = ", V, "\n")
+
+                    	faca
+                        { 
+	                        escreva("=======================\n")
+	                        escreva("| SUBTRAÇÃO |\n")
+	                        escreva("=======================\n")
+	                        escreva("1° Numero: ")
+	                        leia(N1)
+	                        escreva("2° Numero: ")
+	                        leia(N2)
+	                        
+	                        V = N1 - N2
+	                        escreva("==[ ", N1, " - ", N2, " = ", V, "\n")
+
+                        	    escreva("\n")
+				    	    escreva("\n")
+				    
+                        	    escreva("NOVAMENTE? [SIM=> S / N]: ")
+                        	    leia(N)
+
+                        	    limpa()
+
+                        } enquanto (N != "n" e N != "N")
                         
                     caso 'x':
-                        escreva("=============================\n")
-                        escreva("| MULTIPLICAÇÃO |\n")
-                        escreva("=============================\n")
-                        escreva("1° Numero: ")
-                        leia(N1)
-                        escreva("2° Numero: ")
-                        leia(N2)
-                        
-                        V = N1 * N2
-                        escreva("==[ ", N1, " x ", N2, " = ", V, "\n")
+
+                    	faca
+                    	{
+	                        escreva("=============================\n")
+	                        escreva("| MULTIPLICAÇÃO |\n")
+	                        escreva("=============================\n")
+	                        escreva("1° Numero: ")
+	                        leia(N1)
+	                        escreva("2° Numero: ")
+	                        leia(N2)
+	                        
+	                        V = N1 * N2
+	                        escreva("==[ ", N1, " x ", N2, " = ", V, "\n")
+
+	                        escreva("\n")
+				    	    escreva("\n")
+				    
+                        	    escreva("NOVAMENTE? [SIM=> S / N]: ")
+                        	    leia(N)
+
+                        	    limpa()
+                        	    
+                    	}enquanto (N != "n" e N != "N")
                         
                     caso '/':
-                        escreva("=================\n")
-                        escreva("| DIVISÃO |\n")
-                        escreva("=================\n")
-                        escreva("1° Numero: ")
-                        leia(N1)
-                        escreva("2° Numero: ")
-                        leia(N2)
+                    	faca
+                    	{
+	                        escreva("=================\n")
+	                        escreva("| DIVISÃO |\n")
+	                        escreva("=================\n")
+	                        escreva("1° Numero: ")
+	                        leia(N1)
+	                        escreva("2° Numero: ")
+	                        leia(N2)
+	
+					    V = N1 / N2
+	                        
+	                        escreva("==[ ", N1, " / ", N2, " = ", V, "\n")
 
-				    V = N1 / N2
-                        
-                        escreva("==[ ", N1, " / ", N2, " = ", V, "\n")
+	                        escreva("\n")
+				    	    escreva("\n")
+				    
+                        	    escreva("NOVAMENTE? [SIM=> S / N]: ")
+                        	    leia(N)
+
+                        	    limpa()
+                    	} enquanto (N != "n" e N != "N")
                         
                         //escreva("[C] Divisão Completa\n")
                         //escreva("[R] Divisão C/ Resto\n")
@@ -107,18 +157,22 @@ programa
                     
                     //caso contrario:
                         //escreva("Opção inválida! Escolha uma operação válida.\n")
+
+                    caso contrario:
+                    	escreva("Opção invalida! Escolha uma operação válida.\n")
                 }
                 
-                escreva("NOVAMENTE? [SIM=> ENTER / N]: ")
+                escreva("NOVAMENTE? [SIM=> S / N]: ")
                 leia(N)
+                	
                 limpa()
                 
-            } enquanto (N != 'n' e N != 'N')
+            } enquanto (N != "n" e N != "N")
             
             escreva("=================================\n")
             escreva("| DESEJA CONTINUAR? |\n")
             escreva("=================================\n")
-            escreva("| [ENTER] Para voltar ao início |\n")
+            escreva("| [S] Para voltar ao início |\n")
             escreva("| [N] Para sair |\n")
             escreva("==[ ")
             leia(resp)
@@ -129,12 +183,14 @@ programa
     }
 }
 
+
+
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 376; 
+ * @POSICAO-CURSOR = 4539; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
