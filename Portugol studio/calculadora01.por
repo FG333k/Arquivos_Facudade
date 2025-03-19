@@ -39,6 +39,8 @@ programa
                         V = N1 + N2
                         escreva("==[ ", N1, " + ", N2, " = ", V, " ]\n")
                         
+                        pare
+                        
                     caso '-':
                         escreva("=======================\n")
                         escreva("|     SUBTRAÇÃO       |\n")
@@ -50,6 +52,8 @@ programa
                         
                         V = N1 - N2
                         escreva("==[ ", N1, " - ", N2, " = ", V, " ]\n")
+
+                        pare
                         
                     caso 'x':
                         escreva("=============================\n")
@@ -62,6 +66,8 @@ programa
                         
                         V = N1 * N2
                         escreva("==[ ", N1, " x ", N2, " = ", V, " ]\n")
+
+                        pare
                         
                     caso '/':
                         escreva("=================\n")
@@ -74,6 +80,8 @@ programa
                        
                         V = N1 / N2
                         escreva("==[ ", N1, " / ", N2, " = ", V, " ]\n")
+
+                        pare
                         
                     caso '^':
                         escreva("=============================\n")
@@ -86,6 +94,8 @@ programa
                         
                         V = exp(N1 * log(N2))
                         escreva("==[ ", N1, " ^ ", N2, " = ", V, " ]\n")
+
+                        pare
                     
                     caso contrario:
                         escreva("Opção inválida! Escolha uma operação válida.\n")
@@ -116,7 +126,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 11; 
+ * @POSICAO-CURSOR = 3687; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
