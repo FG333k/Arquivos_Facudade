@@ -6,10 +6,10 @@ char a;
 
 void main(){
 
-    fflush(stdin);
+    flush(stdin);
     printf("Qual o seu nome?");
 
-    scanf("a");
+    scanf(a);
     printf("Seja bem vindo %c", a);
 
 

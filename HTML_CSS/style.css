@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+body{
+
+    background-color: gray;
+    margin: 0px;
+    padding: 0px;
+
+
+
+}
+
+.loguin{
+
+    width: 400px;
+    height: 225px;
+    background-image: url(img/wp4020212-dedsec-wallpapers.png);
+    border-style: solid;
+    border-color: black;
+    margin: auto;
+    margin-top: 20%;
+    text-align: center;
+
+}
+
+.loguin input[type=text],
+.loguin input[typo=password]{
+
+    width: 200px;
+    height: 30px;
+    border: 1px solid black;
+    font-size: 13px;
+    font-family: monospace;
+    font-weight: bold;
+
+}
+
+.loguin input[type=submit]{
+
+    background-color: darkred;
+
+}
+
+.loguin input[type=submit]:hover{
+
+    background-color: black;
+    color: gray;
+
+}
