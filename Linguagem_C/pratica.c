@@ -3,13 +3,24 @@
 
 void main(){
 
-    int n1, n2;
+    int  vet_nota[100], cont, num;
+    char vet_nome[100];
 
-    printf("soma de dois numeros inteiros\n");
-    printf("Digite um numero: ");
-    scanf("%d", &n1);
-    printf("Digite outro numero: ");
-    scanf("%d", &n2);
-    printf("O valor da soma entre os numeros %d e %d e igual a: %d \n", n1, n2, n1+n2);
+    printf("Quantidade de alunos: ");
+    if (scanf("%d", num)%2 != 0)
+    {
+        system("clear ||cls");
+        printf("Digite um nuemro inteiro!\n");
+        printf("Quantidade de alunos: ");
 
+    }
+
+    for (cont=0; cont<num; cont++){
+        
+
+    
+        
+
+    }
+    
 }

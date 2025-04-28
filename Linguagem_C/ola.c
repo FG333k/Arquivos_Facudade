@@ -6,7 +6,7 @@ char a;
 
 void main(){
 
-    flush(stdin);
+    fflush(stdin);
     printf("Qual o seu nome?");
 
     scanf(a);
