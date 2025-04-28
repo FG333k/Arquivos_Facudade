@@ -12,9 +12,12 @@ int segundos = 0;
 unsigned long ultimoTempo = 0;
 
 // Pinos dos botões
-const int btnHora = 2;    
-const int btnMinuto = 3;  
+const int btnHora_mais = 2;    
+const int btnMinuto_mais = 3;  
+const int btnhora_menos = 4;
+const int btnminuto_menos = 5;
 
+//função de inicialização
 void setup() {
   Serial.begin(9600);
   
@@ -23,15 +26,18 @@ void setup() {
   display.setBrightness(10);
   
   // Configura botões
-  pinMode(btnHora, INPUT_PULLUP);
-  pinMode(btnMinuto, INPUT_PULLUP);
+  pinMode(btnHora_mais, INPUT_PULLUP);
+  pinMode(btnMinuto_mais, INPUT_PULLUP);
+  pinMode(btnhora_menos, INPUT_PULLUP);
+  pinMode(btnminuto_menos, INPUT_PULLUP);
   
   atualizarDisplay();
 }
 
 void loop() {
   // Atualiza o tempo a cada segundo
-  if(millis() - ultimoTempo >= 1000) {
+  //Mudar a depender do termpo de resposta do simulador
+  if(millis() - ultimoTempo >= 1000 ) {
     ultimoTempo = millis();
     segundos++;
     
@@ -64,7 +70,7 @@ void atualizarDisplay() {
   display.writeDisplay();
 }
 
-//Ajustar hora por terminal (Não implementado)
+//Ajustar hora por monitor serial
 void ajustarHoraSerial() {
   if(Serial.available()) {
     String input = Serial.readStringUntil('\n');
@@ -87,31 +93,57 @@ void ajustarHoraSerial() {
   }
 }
 
-//Ajuste de horas por meio de botões (Apenas de forma crescente)
+//Ajuste de horas por meio de botões
 void verificarBotoes() {
-  // Ajuste de horas
-  if(digitalRead(btnHora) == LOW) {
+  // Ajuste de horas para mais
+  if(digitalRead(btnHora_mais) == LOW) {
     delay(50);
-    if(digitalRead(btnHora) == LOW) {
+    if(digitalRead(btnHora_mais) == LOW) {
       horas = (horas + 1) % 24;
       segundos = 0;
       Serial.print("Hora ajustada para: ");
       Serial.println(horas);
       atualizarDisplay();
-      while(digitalRead(btnHora) == LOW);
+      while(digitalRead(btnHora_mais) == LOW);
     }
   }
 
-  // Ajuste de minutos
-  if(digitalRead(btnMinuto) == LOW) {
+  // Ajuste de minutos para mais
+  if(digitalRead(btnMinuto_mais) == LOW) {
     delay(50);
-    if(digitalRead(btnMinuto) == LOW) {
+    if(digitalRead(btnMinuto_mais) == LOW) {
       minutos = (minutos + 1) % 60;
       segundos = 0;
       Serial.print("Minuto ajustado para: ");
       Serial.println(minutos);
       atualizarDisplay();
-      while(digitalRead(btnMinuto) == LOW);
+      while(digitalRead(btnMinuto_mais) == LOW);
+    }
+  }
+
+  //Ajuste de horas para menos
+  if(digitalRead(btnhora_menos) == LOW) {
+    delay(50);
+    if(digitalRead(btnhora_menos) == LOW) {
+      horas = (horas - 1) % 24;
+      segundos = 0;
+      Serial.print("Hora ajustada para: ");
+      Serial.println(horas);
+      atualizarDisplay();
+      while(digitalRead(btnhora_menos) == LOW);
+    }
+  }
+
+  // Ajuste de minutos para menos
+  if(digitalRead(btnminuto_menos) == LOW) {
+    delay(50);
+    if(digitalRead(btnminuto_menos) == LOW) {
+      minutos = (minutos - 1) % 60;
+      segundos = 0;
+      Serial.print("Minuto ajustado para: ");
+      Serial.println(minutos);
+      atualizarDisplay();
+      while(digitalRead(btnminuto_menos) == LOW);
     }
   }
 }
