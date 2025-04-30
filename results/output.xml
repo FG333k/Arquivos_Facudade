@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.9 on win32)" generated="2025-04-30T01:34:34.965588" rpa="false" schemaversion="5">
+<suite id="s1" name="Arquivos Facudade" source="C:\Users\felip\OneDrive\Documentos\Estudos\Arquivos_Facudade">
+<suite id="s1-s1" name="Engenharia de Software e Gestão de Times Ágeis" source="C:\Users\felip\OneDrive\Documentos\Estudos\Arquivos_Facudade\Engenharia de Software e Gestão de Times Ágeis">
+<suite id="s1-s1-s1" name="Robot" source="C:\Users\felip\OneDrive\Documentos\Estudos\Arquivos_Facudade\Engenharia de Software e Gestão de Times Ágeis\robot">
+<suite id="s1-s1-s1-s1" name="Css" source="C:\Users\felip\OneDrive\Documentos\Estudos\Arquivos_Facudade\Engenharia de Software e Gestão de Times Ágeis\robot\css">
+<suite id="s1-s1-s1-s1-s1" name="Mensagem Watsweb" source="C:\Users\felip\OneDrive\Documentos\Estudos\Arquivos_Facudade\Engenharia de Software e Gestão de Times Ágeis\robot\css\mensagem_watsweb.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="site" line="17">
+<kw name="test">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-30T01:34:35.779877" level="INFO">Opening browser 'edge' to base url 'https://www.tinkercad.com/dashboard'.</msg>
+<arg>https://www.tinkercad.com/dashboard</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-30T01:34:35.779877" elapsed="18.123288"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T01:34:53.907105" level="INFO">Clicking element '//a[@href="/things/foTPpI7HLdu-relogio-usando-arduino/editel"]'.</msg>
+<msg time="2025-04-30T01:34:54.375182" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-30T01:34:54.375182" level="FAIL">Element with locator '//a[@href="/things/foTPpI7HLdu-relogio-usando-arduino/editel"]' not found.</msg>
+<arg>${editar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-04-30T01:34:53.904674" elapsed="0.485892">Element with locator '//a[@href="/things/foTPpI7HLdu-relogio-usando-arduino/editel"]' not found.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-30T01:34:54.390566" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${iniciar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-04-30T01:34:54.390566" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-30T01:34:54.390566" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-04-30T01:34:35.779877" elapsed="18.610689">Element with locator '//a[@href="/things/foTPpI7HLdu-relogio-usando-arduino/editel"]' not found.</status>
+</kw>
+<status status="FAIL" start="2025-04-30T01:34:35.779877" elapsed="18.610689">Element with locator '//a[@href="/things/foTPpI7HLdu-relogio-usando-arduino/editel"]' not found.</status>
+</test>
+<status status="FAIL" start="2025-04-30T01:34:35.067414" elapsed="19.338776"/>
+</suite>
+<status status="FAIL" start="2025-04-30T01:34:35.043313" elapsed="19.372228"/>
+</suite>
+<status status="FAIL" start="2025-04-30T01:34:35.037519" elapsed="19.387521"/>
+</suite>
+<status status="FAIL" start="2025-04-30T01:34:35.014495" elapsed="19.421473"/>
+</suite>
+<status status="FAIL" start="2025-04-30T01:34:34.981491" elapsed="19.467969"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Arquivos Facudade" id="s1" pass="0" fail="1" skip="0">Arquivos Facudade</stat>
+<stat name="Engenharia de Software e Gestão de Times Ágeis" id="s1-s1" pass="0" fail="1" skip="0">Arquivos Facudade.Engenharia de Software e Gestão de Times Ágeis</stat>
+<stat name="Robot" id="s1-s1-s1" pass="0" fail="1" skip="0">Arquivos Facudade.Engenharia de Software e Gestão de Times Ágeis.Robot</stat>
+<stat name="Css" id="s1-s1-s1-s1" pass="0" fail="1" skip="0">Arquivos Facudade.Engenharia de Software e Gestão de Times Ágeis.Robot.Css</stat>
+<stat name="Mensagem Watsweb" id="s1-s1-s1-s1-s1" pass="0" fail="1" skip="0">Arquivos Facudade.Engenharia de Software e Gestão de Times Ágeis.Robot.Css.Mensagem Watsweb</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

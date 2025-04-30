@@ -146,26 +146,46 @@ void verificarBotoes() {
   //Ajuste de horas para menos
   if(digitalRead(btnhora_menos) == LOW) {
     delay(50);
-    if(digitalRead(btnhora_menos) == LOW) {
-      horas = (horas - 1) % 24;
+
+    if (horas > 0){
+      if(digitalRead(btnhora_menos) == LOW) {
+        horas = (horas - 1) % 24;
+        segundos = 0;
+        Serial.print("Hora ajustada para: ");
+        Serial.println(horas);
+        atualizarDisplay();
+        while(digitalRead(btnhora_menos) == LOW);
+      }
+    }else{
       segundos = 0;
-      Serial.print("Hora ajustada para: ");
+      Serial.print("Valor minimo possivel para horas: ");
       Serial.println(horas);
       atualizarDisplay();
       while(digitalRead(btnhora_menos) == LOW);
     }
+    
   }
 
   // Ajuste de minutos para menos
   if(digitalRead(btnminuto_menos) == LOW) {
     delay(50);
-    if(digitalRead(btnminuto_menos) == LOW) {
-      minutos = (minutos - 1) % 60;
+
+    if(minutos > 0){
+      if(digitalRead(btnminuto_menos) == LOW) {
+        minutos = (minutos - 1) % 60;
+        segundos = 0;
+        Serial.print("Minuto ajustado para: ");
+        Serial.println(minutos);
+        atualizarDisplay();
+        while(digitalRead(btnminuto_menos) == LOW);
+      }
+    }else{
       segundos = 0;
-      Serial.print("Minuto ajustado para: ");
+      Serial.print("Valor minimo possivel para minutos : ");
       Serial.println(minutos);
       atualizarDisplay();
       while(digitalRead(btnminuto_menos) == LOW);
     }
+    
   }
 }
