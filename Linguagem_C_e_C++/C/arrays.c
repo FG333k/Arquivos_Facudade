@@ -1,25 +1,42 @@
 #include <stdio.h>
 
 int main(){
+    int vet[5]={1,2,3,4,5}, contv;
+    int mat[2][5]={{10,20,30,40,50}, {60,70,80,90,100}}, cont1, cont2;
+    int test[]={10, 20, 30, 40, 50}, contt, tamanho;
+    int temat[][]={{1,2,3,4}, {5,6,7,8}}, tamanho1, tamanho2, contt1, contt2;
     
-    int numeros[5], tamanho, cont;
-    char letras[5]={'a', 'b', 'c', 'd', 'e'};
-
-    tamanho = (sizeof(numeros) / sizeof(numeros[0]));
-
-    //printf("%d", tamanho);
-
-    for (cont=0; cont<tamanho; cont++)
+    printf("VETOR\n");
+    for (contv = 0;contv < 5; contv++)
     {
-        numeros[cont] = cont+1;
-        printf("\nDigite um numero: %d", numeros[cont]);
-        //scanf("%d", numeros[cont]);
-
-        printf("\nDigite uma letra: %c", letras[cont]);
-        //scanf("%d", letras[cont]);
+        printf("%d ", vet[contv]);
     }
-    
+    printf("\n\n");
 
+    printf("MATRIZ\n");
+    for (cont1 = 0; cont1 < 2; cont1++)
+    {
+        for (cont2 = 0; cont2 < 5; cont2++)
+        {
+            printf("%d ", mat[cont1][cont2]);
+        }
+        printf("\n");
+    }
+    printf("\n\n");
+
+    printf("Testando como optimizar lops (for)\n");
+    printf("VETORES\n");
+    tamanho = sizeof(test) / sizeof(test[0]);
+
+    for (contt = 0; contt < tamanho; contt++)
+    {
+        printf("%d ", test[contt]);
+    }
+
+    pritnf("MATRIZ\nNÃO CONSEGUI IMPLEMENTAR ");
+
+    
+    
 
     return 0;
 }
