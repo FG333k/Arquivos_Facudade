@@ -112,6 +112,7 @@ int main(){
                     p2++;
                 }
                 
+                atualizarJogo();
                 
 
             }else if (contTurn == 9){
@@ -149,10 +150,10 @@ void atualizarJogo(){
     system("cls || clear");
 
     // Titulo estático do jogo
-    printf("====JOGO DA VELHA====\n");
+    printf("\n====JOGO DA VELHA====\n");
 
     // Tabela de pontos
-    printf("\n\t1 Jogador: %d   |   2 Jogador: %d\n", p1, p2);
+    printf("\n  1 Jogador: %d   |   2 Jogador: %d\n", p1, p2);
 
     // Bloco para printar o tabuleiro
     printf("\n");
