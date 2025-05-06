@@ -2,13 +2,16 @@
 #include<stdlib.h>
 #include<stdbool.h>
 
-// Parte editável do tabuleiro
-char tabuleiro[3][3]={{' ', ' ', ' '}, 
-                      {' ', ' ', ' '}, 
-                      {' ', ' ', ' '}};
-
 // Não mudar, é como se fosse um reset da matriz tabuleiro de fato!
 char BASE_REINICIO[3][3]={{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
+
+// Parte editável do tabuleiro
+char tabuleiro[3][3]={{' ', ' ', ' '},
+                      {' ', ' ', ' '},
+                      {' ', ' ', ' '}
+                    };
+int p1, p2;
+
 
 // Protótipos de inicialização
 void atualizarJogo();
@@ -102,6 +105,15 @@ int main(){
 
                 printf("\nParabens jogador %d, voce ganhou com %c.\n", ganhador, vez);
                 loop = false;
+
+                if (ganhador == 1){
+                    p1++;
+                }else{
+                    p2++;
+                }
+                
+                
+
             }else if (contTurn == 9){
                 printf("\nEmpate!\n");
                 loop = false;
@@ -138,6 +150,9 @@ void atualizarJogo(){
 
     // Titulo estático do jogo
     printf("====JOGO DA VELHA====\n");
+
+    // Tabela de pontos
+    printf("\n\t1 Jogador: %d   |   2 Jogador: %d\n", p1, p2);
 
     // Bloco para printar o tabuleiro
     printf("\n");
