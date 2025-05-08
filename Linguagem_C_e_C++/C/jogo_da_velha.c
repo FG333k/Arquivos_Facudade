@@ -101,8 +101,6 @@ int main(){
             // Verificação de vitória / empate
             if(verificacaoVitoria(vez)){
 
-                // ----------------Talvez contagerm de pontos !!! --------------------
-
                 printf("\nParabens jogador %d, voce ganhou com %c.\n", ganhador, vez);
                 loop = false;
 
