@@ -25,7 +25,7 @@ int main(){
     s1.letr = 'A';
     
     s2.num = 20;
-    s2.letr = 'B'
+    s2.letr = 'B';
     
     // Não é possivel exibir uma string normalmente :
     // s1.string = "Text...";
@@ -52,9 +52,9 @@ int main(){
     */
 
     // Exibindo os seus respectivos valores
-    printf("%d", s1.num);
-    printf("%c", s1.letr);
-    printf("%s", s1.string);
+    printf("%d\n", s1.num);
+    printf("%c\n", s1.letr);
+    printf("%s\n", s1.string);
 
     /*
     Utilidade das structs:
