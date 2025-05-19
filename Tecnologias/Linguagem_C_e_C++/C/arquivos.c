@@ -45,7 +45,7 @@ int main(){
         while(fgets(texto, 100, ftxt)){ // Função fgets() recebe os paramentros: nome do array=texto, tamanho maximo=100, nome do arquivo=ftxt
 
         printf("%s", texto); // Exibe o conteudo lido do arquivo
-    }
+        }
     }
     fclose(ftxt); // Fecha o arquivo
 
