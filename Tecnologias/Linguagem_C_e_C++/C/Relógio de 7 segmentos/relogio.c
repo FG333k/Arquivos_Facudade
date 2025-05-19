@@ -63,7 +63,7 @@ int main() {
     // loop contnuo para atualização do relógio
     while (1) {
 
-        // Obtem a hora atual e o sistema converte par aestrutura tm
+        // Obtem a hora atual e o sistema converte par a estrutura tm
         time_t now;
         struct tm *timeinfo;
         time(&now);
