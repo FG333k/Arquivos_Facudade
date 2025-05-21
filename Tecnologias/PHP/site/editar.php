@@ -1,22 +1,22 @@
 <?php
 require 'conn.php';
 
-$info = [];
-$id = filter_input(INPUT_GET, 'id');
+$info = [];		// Array para dados de usuários
+$id = filter_input(INPUT_GET, 'id');	// Pega o ID da URL
 
+// Se o ID existir, busca o usuário
 if ($id){
 	$sql = "SELECT * FROM usuarios WHERE id = '$id'";
     $result = mysqli_query($conexao,$sql);
+
 	if (mysqli_num_rows($result) > 0){
-		$info = mysqli_fetch_assoc($result);
+		$info = mysqli_fetch_assoc($result);	// Armazen os dados 
 
 	}else{
-		header("Location: principal.php");
-
+		header("Location: principal.php");		// Se nao existir, volta
 	}
 }else{
-
-	header("Location: principal.php");
+	header("Location: principal.php");			// Se não houver ID, volta
 }
 ?>
 
@@ -34,27 +34,17 @@ if ($id){
 
 <div class="formulario">
 
+<!-- Formulário preenchido dom os dados do usuário -->
 <form method="post" action="edit.php">
-
-<input type="hidden" name="id" value="<?=$info['id'];?>">
-
-<label>
-Nome:<br/>
-<input type="tetx" name="nome" value="<?=$info['nome'];?>">	
-
-</label><br/><br/>
-<label>
-Senha:<br/>
-<input type="password" name="senha" value="<?=$info['senha'];?>">	
-</label><br/><br/>
-<input type="submit" value="Salvar">
-<button><a href="principal.php">VOLTAR</a></button>
-
+	<input type="hidden" name="id" value="<?=$info['id'];?>">
+	<label>Nome:<br/><input type="tetx" name="nome" value="<?=$info['nome'];?>"></label>
+	<br/><br/>
+	<label>Senha:<br/><input type="password" name="senha" value="<?=$info['senha'];?>"></label>
+	<br/><br/>
+	<input type="submit" value="Salvar">
+	<button><a href="principal.php">VOLTAR</a></button>
 </form>
 
 </div>
-
-
-
 </body>
 </html>

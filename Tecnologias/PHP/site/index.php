@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,14 +10,15 @@
 <body>
 <div class="login">
 	
-<form method="post" action="login.php">
-	
-<input type="text" name="nome" placeholder="nome" autocomplete="off"><br><br>
-<input type="password" name="senha" placeholder="senha"><br><br>
-<input type="submit" value="login" name="logar">
-<input type="reset" value="cancelar"><br><br>
+	<!-- Formulário envia dados para login.php via POST -->
+	<form method="post" action="login.php">
+		
+		<input type="text" name="nome" placeholder="nome" autocomplete="off"><br><br>
+		<input type="password" name="senha" placeholder="senha"><br><br>
+		<input type="submit" value="login" name="logar">
+		<input type="reset" value="cancelar"><br><br>
 
-</form>
+	</form>
 
 </div>
 </body>
