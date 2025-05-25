@@ -33,6 +33,7 @@ if (mysqli_num_rows($result) > 0){
 		<th>ID</th>
 		<th>NOME</th>
 		<th>SENHA</th>
+		<th>OPÇÕES</th>
 	</tr>
 	<?php foreach ($lista as $dados): ?>
 	<tr>  
