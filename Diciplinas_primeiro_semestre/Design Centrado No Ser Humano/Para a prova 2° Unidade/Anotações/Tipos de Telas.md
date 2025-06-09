@@ -77,4 +77,6 @@
 | **Cadastro/Edição** | Inserir/modificar dados | Edição total         | Alterar Compra (Pág. 48)       |
 | **Relatório**       | Analisar/exportar dados | Leitura + filtros    | Relatório de Autores (Pág. 50) |
 
----
+----
+
+##### ****Tela de login pode ser uma tela de cadastro e consulta ao mesmo tempo, pois se trata além de uma inserção de dados nos campos há também a verificação de credenciais que se trata de uma consulta
