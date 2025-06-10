@@ -3,18 +3,26 @@
 #include<stdbool.h>
 
 // Não mudar, é como se fosse um reset da matriz tabuleiro de fato!
-char BASE_REINICIO[3][3]={{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
+char BASE_REINICIO[3][3]={
+    {' ', ' ', ' '},
+    {' ', ' ', ' '},
+    {' ', ' ', ' '}
+};
 
 // Parte editável do tabuleiro
-char tabuleiro[3][3]={{' ', ' ', ' '},
-                      {' ', ' ', ' '},
-                      {' ', ' ', ' '}
-                    };
+char tabuleiro[3][3]={
+    {' ', ' ', ' '},
+    {' ', ' ', ' '},
+    {' ', ' ', ' '}
+};
+
+// Jogadores
 int p1, p2;
 
 
 // Protótipos de inicialização
 void atualizarJogo();
+void resetTabuleiro();
 bool marcacao(int linha, int coluna, char jogador);
 bool verificacaoVitoria(char vez);
 
@@ -24,13 +32,7 @@ int main(){
 
     do
     {
-        // Reset do tabuleiro
-        for (int i = 0; i < 3; i++){
-            for (int j = 0; j < 3; j++){
-                tabuleiro[i][j] = BASE_REINICIO[i][j];
-            }
-        }
-
+        resetTabuleiro();
         atualizarJogo();
 
         // Atirbuição depeças aos jogadores
@@ -123,7 +125,7 @@ int main(){
 
         // Escolha de reinicio
         do{
-            printf("Deseja recomecar? [S-sim / N-nao]");
+            printf("Deseja recomecar? [S-sim / N-nao]: ");
             scanf(" %c", &LoopJogo);
 
             // Tratamento de erros
@@ -171,6 +173,18 @@ void atualizarJogo(){
         }
     }
     printf("\n");
+}
+
+// Função para resetar o tabuleiro do jogo
+void resetTabuleiro(){
+
+    // Reset do tabuleiro
+    for (int i = 0; i < 3; i++){
+        for (int j = 0; j < 3; j++){
+            tabuleiro[i][j] = BASE_REINICIO[i][j];
+        }
+    }
+
 }
 
 // Função para a marcação da figura de acordo com o jogador
