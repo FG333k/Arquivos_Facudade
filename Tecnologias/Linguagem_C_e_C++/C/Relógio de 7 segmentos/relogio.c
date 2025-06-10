@@ -22,41 +22,7 @@ const int segments[10][7] = {
     {1,1,1,1,0,1,1}  // 9                |____d____|
 };
 
-
-// Função para exibir uma linha com todos os 6 digitos (HH:MM:SS)
-void printDigitosLinha(int digitos[], int linha) {
-
-    // Percorre cada digito 
-    for (int i = 0; i < 6; i++) {
-        int d = digitos[i];
-        
-        // Bloco de verificção de segmentos (1=ativo, 0=desativo)
-        if (linha == 0) { // Segmento a (topo)
-            printf(" %c ", segments[d][0] ? '_' : ' ');
-        }
-        else if (linha == 1) { // Parte superior (f + espaço + b)
-            printf("%c %c", 
-                   segments[d][5] ? '|' : ' ',
-                   segments[d][1] ? '|' : ' ');
-        }
-        else if (linha == 2) { // Segmento g (central)
-            printf(" %c ", (segments[d][6]) ? '_' : ' ');
-        }
-        else if (linha == 3) { // Parte inferior (e + espaço + c)
-            printf("%c %c",
-                   segments[d][4] ? '|' : ' ',
-                   segments[d][2] ? '|' : ' ');
-        }
-        else if (linha == 4) { // Segmento d (base)
-            printf(" %c ", segments[d][3] ? '_' : ' ');
-        }
-
-        // Insere espaçamento entre os digitos para os ":" 
-        if (i == 1 || i == 3) printf("   "); 
-        else printf(" ");
-    }
-    printf("\n");
-}
+void printDigitosLinha(int digitos[], int linha);
 
 int main() {
 
@@ -93,4 +59,39 @@ int main() {
         sleep(1);
     }
     return 0;
+}
+
+// Função para exibir uma linha com todos os 6 digitos (HH:MM:SS)
+void printDigitosLinha(int digitos[], int linha) {
+
+    // Percorre cada digito 
+    for (int i = 0; i < 6; i++) {
+        int d = digitos[i];
+        
+        // Bloco de verificção de segmentos (1=ativo, 0=desativo)
+        if (linha == 0) { // Segmento a (topo)
+            printf(" %c ", segments[d][0] ? '_' : ' ');
+        }
+        else if (linha == 1) { // Parte superior (f + espaço + b)
+            printf("%c %c", 
+                   segments[d][5] ? '|' : ' ',
+                   segments[d][1] ? '|' : ' ');
+        }
+        else if (linha == 2) { // Segmento g (central)
+            printf(" %c ", (segments[d][6]) ? '_' : ' ');
+        }
+        else if (linha == 3) { // Parte inferior (e + espaço + c)
+            printf("%c %c",
+                   segments[d][4] ? '|' : ' ',
+                   segments[d][2] ? '|' : ' ');
+        }
+        else if (linha == 4) { // Segmento d (base)
+            printf(" %c ", segments[d][3] ? '_' : ' ');
+        }
+
+        // Insere espaçamento entre os digitos para os ":" 
+        if (i == 1 || i == 3) printf("   "); 
+        else printf(" ");
+    }
+    printf("\n");
 }
