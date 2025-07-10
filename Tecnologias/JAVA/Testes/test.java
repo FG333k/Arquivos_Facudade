@@ -14,7 +14,7 @@ public class test {
         for (String string : args) {
             
         }
-        for (int[] linha : Nummeros) {
+        for (int[] linha : nummeros) {
             for (int coluna : linha) {
                 
             }
@@ -22,7 +22,7 @@ public class test {
 
         do {
             
-        } while (condition);
+        } while (true);
 
         //Sring
         String nomedastring = "Nome";
