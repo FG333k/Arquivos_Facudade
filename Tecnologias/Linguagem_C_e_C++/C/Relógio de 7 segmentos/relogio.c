@@ -8,7 +8,7 @@
     segmento está ativo para validação do caracter
     a ser printado no console.  */
 const int segments[10][7] = {
-   //a,b,c,d,e,f,g                      LOCALIZAÇÃO DOS SEGMENTOS
+   //a b c d e f g                      LOCALIZAÇÃO DOS SEGMENTOS
    //| | | | | | |                       _____a_____    1=ativo   
     {1,1,1,1,1,1,0}, // 0                |         |    0=desativo
     {0,1,1,0,0,0,0}, // 1                |         |
