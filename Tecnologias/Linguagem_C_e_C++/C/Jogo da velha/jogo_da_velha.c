@@ -30,8 +30,7 @@ int main(){
     char pecas[2]={'X', 'O'}, escolha_peca, jogador1='\0', jogador2='\0', LoopJogo;
     bool escolhaReinicio = true;
 
-    do
-    {
+    do{
         resetTabuleiro();
         atualizarJogo();
 
