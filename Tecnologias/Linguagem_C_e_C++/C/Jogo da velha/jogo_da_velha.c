@@ -3,52 +3,67 @@
 #include<stdbool.h>
 
 // Não mudar, é como se fosse um reset da matriz tabuleiro de fato!
-char BASE_REINICIO[3][3]={
+static const char BASE_REINICIO[3][3]={
     {' ', ' ', ' '},
     {' ', ' ', ' '},
     {' ', ' ', ' '}
 };
 
 // Parte editável do tabuleiro
-char tabuleiro[3][3]={
+static char tabuleiro[3][3]={
     {' ', ' ', ' '},
     {' ', ' ', ' '},
     {' ', ' ', ' '}
 };
 
 // Jogadores
-int p1, p2;
+static int p1, p2;
+
+// Teste
+typedef struct{
+    int vitorias;
+    char peca;
+}Jogador;
+
 
 
 // Protótipos de inicialização
-void atualizarJogo();
+void atualizarJogo(Jogador jogador1, Jogador jogador2);
 void resetTabuleiro();
-bool marcacao(int linha, int coluna, char jogador);
+bool marcacao(int linha, int coluna, char peca);
 bool verificacaoVitoria(char vez);
 
 int main(){
-    char pecas[2]={'X', 'O'}, escolha_peca, jogador1='\0', jogador2='\0', LoopJogo;
+    char pecas[2]={'X', 'O'}, escolha_peca,/* jogador1='\0', jogador2='\0',*/ LoopJogo;
     bool escolhaReinicio = true;
+
+    Jogador jogador1;
+    jogador1.vitorias = 0;
+    jogador1.peca = '\0';
+
+    Jogador jogador2;
+    jogador2.vitorias = 0;
+    jogador2.peca = '\0';
 
     do{
         resetTabuleiro();
-        atualizarJogo();
+        atualizarJogo(jogador1, jogador2);
 
         // Atirbuição depeças aos jogadores
         do{ 
             printf("\nJogador 1 [X ou O]: ");
             scanf(" %c", &escolha_peca);
             if (escolha_peca == 'X' || escolha_peca == 'x') {
-                jogador1 = 'X';
-                jogador2 = 'O';
+                jogador1.peca = 'X';
+                jogador2.peca = 'O';
             } else if (escolha_peca == 'O' || escolha_peca == 'o') {
-                jogador1 = 'O';
-                jogador2 = 'X';
+                jogador1.peca = 'O';
+                jogador2.peca = 'X';
             } else {
                 printf("Opcao invalida. Tente novamente.\n");
             }
     
-        } while (jogador1 == '\0');
+        } while (jogador1.peca == '\0');
     
         int contTurn=0,linha, coluna, ganhador;
         char vez;
@@ -59,9 +74,9 @@ int main(){
     
             // Contador de turnos 
             if (contTurn%2 == 0){
-                vez = jogador1;
+                vez = jogador1.peca;
             }else{
-                vez = jogador2;
+                vez = jogador2.peca;
             }
             contTurn++;
         
@@ -91,13 +106,13 @@ int main(){
             }
 
             // Identificador do ganhador
-            if (vez == jogador1){
+            if (vez == jogador1.peca){
                 ganhador = 1;
             }else{
                 ganhador = 2;
             }
             
-            atualizarJogo();
+            atualizarJogo(jogador1, jogador2);
             
             // Verificação de vitória / empate
             if(verificacaoVitoria(vez)){
@@ -106,12 +121,12 @@ int main(){
                 loop = false;
 
                 if (ganhador == 1){
-                    p1++;
+                    jogador1.vitorias++;
                 }else{
-                    p2++;
+                    jogador2.vitorias++;
                 }
                 
-                atualizarJogo();
+                atualizarJogo(jogador1, jogador2);
                 
 
             }else if (contTurn == 9){
@@ -123,6 +138,7 @@ int main(){
         
 
         // Escolha de reinicio
+        escolhaReinicio = true; // Reset da variavel para evitar erros
         do{
             printf("Deseja recomecar? [S-sim / N-nao]: ");
             scanf(" %c", &LoopJogo);
@@ -142,17 +158,26 @@ int main(){
     return 0;
 }
 
+// Função para limpar a tela
+void limparTela(){
+    #ifdef _WIN32
+        system("cls");
+    #else
+        system("clear");
+    #endif
+}
+
 // Função para reexibir o tabuleiro
-void atualizarJogo(){
+void atualizarJogo(struct Jogador jogador1, struct Jogador jogador2){
 
     // Limpa a tela para manter o jogo claro
-    system("cls || clear");
+    limparTela();
 
     // Titulo estático do jogo
     printf("\n====JOGO DA VELHA====\n");
 
     // Tabela de pontos
-    printf("\n  1 Jogador: %d   |   2 Jogador: %d\n", p1, p2);
+    printf("\n  1 Jogador: %d   |   2 Jogador: %d\n", jogador1.vitorias, jogador2.vitorias);
 
     // Bloco para printar o tabuleiro
     printf("\n");
@@ -187,11 +212,11 @@ void resetTabuleiro(){
 }
 
 // Função para a marcação da figura de acordo com o jogador
-bool marcacao(int linha, int coluna, char jogador){
+bool marcacao(int linha, int coluna, char peca){
 
     // Verifica se a posição já está ocupada
     if (tabuleiro[linha][coluna] == ' '){
-        tabuleiro[linha][coluna] = jogador;
+        tabuleiro[linha][coluna] = peca;
         return true;
     }
     return false;
@@ -206,13 +231,12 @@ bool verificacaoVitoria(char vez){
         if ((tabuleiro[i][0] == vez) && (tabuleiro[i][1] == vez) && (tabuleiro[i][2] == vez)){
             return true;
         }
-    }
-    // Verificação de cada coluna
-    for (int j= 0; j < 3; j++){
         if ((tabuleiro[0][j] == vez) && (tabuleiro[1][j] == vez) && (tabuleiro[2][j] == vez)){
             return true;
         }
     }
+    
+    
     // Verifição de diagonais
     if ((tabuleiro[0][0] == vez) && (tabuleiro[1][1] == vez) && (tabuleiro[2][2] == vez)){
         return true;
