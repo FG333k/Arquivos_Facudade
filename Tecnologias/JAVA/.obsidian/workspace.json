@@ -1,0 +1,240 @@
+{
+  "main": {
+    "id": "c04d3957b1431386",
+    "type": "split",
+    "children": [
+      {
+        "id": "acf3ebba0b7d6a4a",
+        "type": "tabs",
+        "dimension": 31.35755258126195,
+        "children": [
+          {
+            "id": "a53c038c1ae18aa7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "POO/POO - Java.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "POO - Java"
+            },
+            "group": "bae82ccf3ecba8a1"
+          }
+        ]
+      },
+      {
+        "id": "e1c8e36bf3811081",
+        "type": "tabs",
+        "dimension": 68.64244741873804,
+        "children": [
+          {
+            "id": "717a017de50084a5",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "POO/POO - Java.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 5,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": true,
+                  "showTags": false,
+                  "showAttachments": true,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": false,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": -1.7,
+                  "nodeSizeMultiplier": 0.508333333333333,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": false,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 11.9791666666667,
+                  "linkStrength": 0.369791666666667,
+                  "linkDistance": 30,
+                  "scale": 0.37964210596509523,
+                  "close": true
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "Gráfico de POO - Java"
+            },
+            "group": "bae82ccf3ecba8a1"
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8ef52af98822e953",
+    "type": "split",
+    "children": [
+      {
+        "id": "6006529ece0ba86d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "46e9e4fc43ff4be7",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "02f0cd235e738da4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "section:(métodos)",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "e95acb585e7b8774",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 214.5
+  },
+  "right": {
+    "id": "bbcbec050cc3c179",
+    "type": "split",
+    "children": [
+      {
+        "id": "e9f322068cadf082",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0aefa35bc93b5688",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "POO/Modificadores/Modificadores.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos para Modificadores"
+            }
+          },
+          {
+            "id": "517715bec9c5aa49",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "POO/Modificadores/Modificadores.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para Modificadores"
+            }
+          },
+          {
+            "id": "44e7f9cda83f1642",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "3c9a8fb0df7455ef",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "POO/Modificadores/Modificadores.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de Modificadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "717a017de50084a5",
+  "lastOpenFiles": [
+    "POO/Construtores/This/This.md",
+    "POO/Construtores/Construtores.md",
+    "POO/Classes e objetos.md",
+    "POO/Modificadores/Modificadores.md",
+    "POO/Atributos.md",
+    "POO/Métodos.md",
+    "Sem título.md",
+    "POO/POO - Java.md",
+    "POO/Modificadores/Combiações/Animal.java",
+    "POO/Modificadores/Combiações/Banco.java",
+    "POO/Modificadores/Combiações/Config.java",
+    "POO/Modificadores/Combiações/Um_public_static_final.java",
+    "POO/Modificadores/Combiações/Um_",
+    "POO/Modificadores/Combiações",
+    "POO/Modificadores/Não acesso/Volatile.java",
+    "POO/Modificadores/Não acesso/Transient.java",
+    "POO/Modificadores/Não acesso/transient.java",
+    "POO/Modificadores/Não acesso/Synchronized.java",
+    "Modificadores.java.md"
+  ]
+}
